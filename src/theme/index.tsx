@@ -31,8 +31,8 @@ const mediaWidthTemplates: { [width in keyof typeof MEDIA_WIDTHS]: typeof css } 
   {}
 ) as any
 
-const white = '#FFFFFF'
-const black = '#000000'
+const white = '#FFFFFF';
+const black = '#000000';
 
 export function colors(darkMode: boolean): Colors {
   return {
@@ -41,49 +41,45 @@ export function colors(darkMode: boolean): Colors {
     black,
 
     // text
-    text1: darkMode ? '#FFFFFF' : '#000000',
-    text2: darkMode ? '#C3C5CB' : '#565A69',
-    text3: darkMode ? '#6C7284' : '#888D9B',
-    text4: darkMode ? '#565A69' : '#C3C5CB',
-    text5: darkMode ? '#2C2F36' : '#EDEEF2',
+    text1: darkMode ? '#E0BBFF' : '#3D0075', // Light purple in dark, deep purple in light
+    text2: darkMode ? '#C49BDB' : '#5E2B97',
+    text3: darkMode ? '#A87CB0' : '#7A42B2',
+    text4: darkMode ? '#8D6A99' : '#A87CB0',
+    text5: darkMode ? '#5E2B97' : '#E0BBFF',
 
     // backgrounds / greys
-    bg1: darkMode ? '#212429' : '#FFFFFF',
-    bg2: darkMode ? '#2C2F36' : '#F7F8FA',
-    bg3: darkMode ? '#40444F' : '#EDEEF2',
-    bg4: darkMode ? '#565A69' : '#CED0D9',
-    bg5: darkMode ? '#565A69' : '#888D9B',
+    bg1: darkMode ? '#1E1B29' : '#F5F0FF', // Deep purple-black in dark, light lavender in light
+    bg2: darkMode ? '#2A253B' : '#EDE4FF',
+    bg3: darkMode ? '#3B3355' : '#DED1FF',
+    bg4: darkMode ? '#4E3F6B' : '#C4A9E3',
+    bg5: darkMode ? '#5E4A7A' : '#B598D1',
 
-    //specialty colors
-    modalBG: darkMode ? 'rgba(0,0,0,42.5)' : 'rgba(0,0,0,0.3)',
-    advancedBG: darkMode ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.6)',
+    // specialty colors
+    modalBG: darkMode ? 'rgba(30, 27, 41, 0.8)' : 'rgba(245, 240, 255, 0.8)',
+    advancedBG: darkMode ? 'rgba(60, 50, 80, 0.6)' : 'rgba(240, 225, 255, 0.6)',
 
-    //primary colors
-    primary1: darkMode ? '#2172E5' : '#ff007a',
-    primary2: darkMode ? '#3680E7' : '#FF8CC3',
-    primary3: darkMode ? '#4D8FEA' : '#FF99C9',
-    primary4: darkMode ? '#376bad70' : '#F6DDE8',
-    primary5: darkMode ? '#153d6f70' : '#FDEAF1',
+    // primary colors (focused on purple shades)
+    primary1: darkMode ? '#9B59B6' : '#A569BD',
+    primary2: darkMode ? '#8E44AD' : '#BB8FCE',
+    primary3: darkMode ? '#7D3C98' : '#D2B4DE',
+    primary4: darkMode ? '#5B2C6F' : '#E8DAEF',
+    primary5: darkMode ? '#4A235A' : '#F4ECF7',
 
     // color text
-    primaryText1: darkMode ? '#6da8ff' : '#ff007a',
+    primaryText1: darkMode ? '#D7BDE2' : '#7D3C98',
 
     // secondary colors
-    secondary1: darkMode ? '#2172E5' : '#ff007a',
-    secondary2: darkMode ? '#17000b26' : '#F6DDE8',
-    secondary3: darkMode ? '#17000b26' : '#FDEAF1',
+    secondary1: darkMode ? '#A569BD' : '#9B59B6',
+    secondary2: darkMode ? '#7D3C9855' : '#E8DAEF',
+    secondary3: darkMode ? '#5B2C6F55' : '#F4ECF7',
 
     // other
-    red1: '#FF6871',
-    red2: '#F82D3A',
+    red1: '#FF6B81',
+    red2: '#E74C3C',
     green1: '#27AE60',
-    yellow1: '#FFE270',
-    yellow2: '#F3841E'
-
-    // dont wanna forget these blue yet
-    // blue4: darkMode ? '#153d6f70' : '#C4D9F8',
-    // blue5: darkMode ? '#153d6f70' : '#EBF4FF',
-  }
+    yellow1: '#F1C40F',
+    yellow2: '#F39C12'
+  };
 }
 
 export function theme(darkMode: boolean): DefaultTheme {
