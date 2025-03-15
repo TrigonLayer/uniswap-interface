@@ -61,7 +61,7 @@ export default function Pool() {
       <AppBody>
         <SwapPoolTabs active={'pool'} />
         <AutoColumn gap="lg" justify="center">
-          <ButtonPrimary id="join-pool-button" as={Link} style={{ padding: 16 }} to="/add/ETH">
+          <ButtonPrimary id="join-pool-button" as={Link} style={{ padding: 16 }} to="/add/NEX">
             <Text fontWeight={500} fontSize={20}>
               Add Liquidity
             </Text>
@@ -112,12 +112,6 @@ export default function Pool() {
           </AutoColumn>
         </AutoColumn>
       </AppBody>
-
-      <div style={{ display: 'flex', alignItems: 'center', marginTop: '1.5rem' }}>
-        <ButtonSecondary as={Link} style={{ width: 'initial' }} to="/migrate/v1">
-          Migrate V1 Liquidity
-        </ButtonSecondary>
-      </div>
     </>
   )
 }

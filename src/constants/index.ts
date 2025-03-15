@@ -10,7 +10,7 @@ type ChainTokenList = {
   readonly [chainId in ChainId]: Token[]
 }
 
-export const DAI = new Token(ChainId.T_LAYER, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18, 'DAI', 'Dai Stablecoin')
+export const SWAP = new Token(ChainId.T_LAYER, '0x26aCBE672A9c29d89313b5c8b72c1B0493b7C386', 18, 'XWAP', 'NeXwap')
 export const USDC = new Token(ChainId.T_LAYER, '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', 6, 'USDC', 'USD//C')
 export const USDT = new Token(ChainId.T_LAYER, '0xdAC17F958D2ee523a2206206994597C13D831ec7', 6, 'USDT', 'Tether USD')
 export const COMP = new Token(ChainId.T_LAYER, '0xc00e94Cb662C3520282E6f5717214004A7f26888', 18, 'COMP', 'Compound')
@@ -24,7 +24,7 @@ const WETH_ONLY: ChainTokenList = {
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.T_LAYER]: [...WETH_ONLY[ChainId.T_LAYER], DAI, USDC, USDT, COMP, MKR]
+  [ChainId.T_LAYER]: [...WETH_ONLY[ChainId.T_LAYER], SWAP, USDC, USDT, COMP, MKR]
 }
 
 /**
@@ -33,20 +33,20 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
  */
 export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: Token[] } } = {
   [ChainId.T_LAYER]: {
-    [AMPL.address]: [DAI, WETH[ChainId.T_LAYER]]
+    [AMPL.address]: [SWAP, WETH[ChainId.T_LAYER]]
   }
 }
 
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.T_LAYER]: [...WETH_ONLY[ChainId.T_LAYER], DAI, USDC, USDT]
+  [ChainId.T_LAYER]: [...WETH_ONLY[ChainId.T_LAYER], SWAP, USDC, USDT]
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.T_LAYER]: [...WETH_ONLY[ChainId.T_LAYER], DAI, USDC, USDT]
+  [ChainId.T_LAYER]: [...WETH_ONLY[ChainId.T_LAYER], SWAP, USDC, USDT]
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
@@ -56,7 +56,7 @@ export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } 
       new Token(ChainId.T_LAYER, '0x39AA39c021dfbaE8faC545936693aC917d5E7563', 8, 'cUSDC', 'Compound USD Coin')
     ],
     [USDC, USDT],
-    [DAI, USDT]
+    [SWAP, USDT]
   ]
 }
 

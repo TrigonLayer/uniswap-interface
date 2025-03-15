@@ -2,7 +2,7 @@ import { Currency, ETHER, Token } from '@nexuslayer/sdk'
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
-import EthereumLogo from '../../assets/images/ethereum-logo.png'
+import EthereumLogo from '../../assets/images/nexuscoin.jpg'
 import { WrappedTokenInfo } from '../../state/lists/hooks'
 import uriToHttp from '../../utils/uriToHttp'
 
